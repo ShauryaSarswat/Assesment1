@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form onsubmit="using_up(event)" id="forms" class="m-2 p-3">
+
+        <!-- Text Based Inputs -->
+        <label for="name" class="p-1 m-1 text-bg-danger">Name : </label>
+        <input type="text" name="name" id="name">
+
+        <br>
+        <!-- Number Based Inputs -->
+        <label for="number" class="p-1 m-1 text-bg-danger btn-round">Age : </label>
+        <input type="number" name="number" id="number" >
+
+        <br>
+        <!-- E-Mail Based Inputs -->
+        <label for="email" class="p-1 m-1 text-bg-danger">Email : </label>
+        <input type="email" name="email" id="email">
+
+        <br>
+        <!-- Checkbox Based Inputs -->
+        <label for="check" class="p-1 m-1 text-bg-danger">Direct Admission : </label>
+        <input type="checkbox" name="check" id="check">
+
+        <br>
+        <!-- Radio Button Based Inputs -->
+        <label for="radios" class="p-1 m-1 text-bg-danger">CourseWork </label>
+        <input type="radio" name="radios" id="radios" value="btech" > B.Tech.
+        <input type="radio" name="radios" id="radios" value="bcom"> B.Com.
+        <input type="radio" name="radios" id="radios" value="barch"> B.Arch.
+        <input type="radio" name="radios" id="radios" value="bvoc"> B.Voc.
+
+        <br>
+        <!-- Dropdown Based Inputs -->
+        <label for="selection" class="p-1 m-1 text-bg-danger">Menu : </label>
+        <select name="selection" id="selection" class="p-2">
+            <option value="fees_submission" selected>fees_submission</option>
+            <option value="Registration">Registration</option>
+            <option value="Account">Account</option>
+        </select>
+
+        <br>
+        <!-- Range Based Inputs -->
+        <label for="slider" class="p-1 m-1 text-bg-danger">Percentage :</label>
+        <input type="range" id="mySlider" min="0" max="100" value="50" name="slider" oninput="updateSliderValue(this.value)">
+  <p id="sliderValue" class="p-1 m-1 btn text-bg-warning">50%</p>
+
+        <br>
+        <!-- Date-Time Based Inputs -->
+        <label for="datetime">Date of Birth :</label>
+        <input type="datetime-local" id="datetime" name="datetime">
+
+        <br><br>
+
+       <button type="button" onclick="print_all()" class="btn btn-dark">Submit</button>
+    
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
